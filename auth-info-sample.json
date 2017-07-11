@@ -1,0 +1,10 @@
+{
+	"youtube": {
+		"channel-id":"YourChannelIDHere",
+		"auth-key":"TheAuthKeyForYourChannel"
+	},
+	"facebook": {
+		"auth-token":"YourFBAuthToken",
+		"page-id":"YourFacebookPageID"
+	}
+}

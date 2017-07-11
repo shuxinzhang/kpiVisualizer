@@ -10,15 +10,14 @@ AUTH_KEY = login.getCredentials('youtube','auth-key') #hard-coded instance
 
 YOUTUBE_RAW_DATA = requests.get("https://www.googleapis.com/youtube/v3/channels?"+
 	"part=statistics&id="+CHANNEL_ID+"&key="+AUTH_KEY)
-
-def get_statistics(raw_data):
+def request_stats():
+	return requests.get("https://www.googleapis.com/youtube/v3/channels?"+
+		"part=statistics&id="+CHANNEL_ID+"&key="+AUTH_KEY)
+def get_statistics(raw_data,param):
 	if raw_data.status_code!=200:
 		print 'Error getting data, check key or id!'
 		return 
 	else :
-		statistics =  raw_data.json()['items'][0]['statistics']
-		return statistics
+		data =  raw_data.json()['items'][0]['statistics'][param]
+		return data
 #TO-DO: MIGRATE THOSE TO EXCEL
-print("Youtube View = " + get_statistics(YOUTUBE_RAW_DATA)['viewCount']) 
-print("Video amount = "  + get_statistics(YOUTUBE_RAW_DATA)['videoCount'])
-print("Subscriber amount = " + get_statistics(YOUTUBE_RAW_DATA)['subscriberCount'])
