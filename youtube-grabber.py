@@ -1,9 +1,12 @@
 import requests
 import json
+import loginHelper as login
 
 ####run pip install requests before running this code!
-CHANNEL_ID = "UCZDi5aTYgGoi1Snmq-uoDeA" #hard-coded instance rn
-AUTH_KEY = "AIzaSyA-qZbTVrEjXABQ8JAOuP-rEphk0x-KeB8" #hard-coded instance
+auth_data = open('auth-info.json')
+auth_json = json.load(auth_data)
+CHANNEL_ID = login.getCredentials('youtube','channel-id') #hard-coded instance rn
+AUTH_KEY = login.getCredentials('youtube','auth-key') #hard-coded instance
 
 YOUTUBE_RAW_DATA = requests.get("https://www.googleapis.com/youtube/v3/channels?"+
 	"part=statistics&id="+CHANNEL_ID+"&key="+AUTH_KEY)
