@@ -1,4 +1,4 @@
 requests
 facebook-sdk
-gspread
+--upgrade google-api-python-client
 oauth2client
