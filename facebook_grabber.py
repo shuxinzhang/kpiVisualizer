@@ -1,7 +1,7 @@
 import requests
 import json
 import facebook
-import loginHelper as login
+import login_helper as login
 AUTH_TOKEN = login.getCredentials('facebook','auth-token')
 PAGE_ID = login.getCredentials('facebook','page-id')
 graph = facebook.GraphAPI(access_token = AUTH_TOKEN)

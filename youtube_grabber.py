@@ -1,6 +1,6 @@
 import requests
 import json
-import loginHelper as login
+import login_helper as login
 
 ####run pip install requests before running this code!
 auth_data = open('auth-info.json')
