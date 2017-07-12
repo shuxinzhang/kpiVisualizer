@@ -1,3 +1,5 @@
 auth-info.json
-
+build/
+dist/
+Katalyst_Kpi_Visualizer.egg-info
 *.pyc

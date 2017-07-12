@@ -9,6 +9,10 @@ def printYouTubeData():
 
 def printFacebookData():
 	facebook.printLikes()
-	
-printYouTubeData()
-printFacebookData()
+
+def main():
+	printYouTubeData()
+	printFacebookData()
+
+if __name__ == "__main__":
+    main()
