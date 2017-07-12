@@ -1,2 +1,4 @@
 requests
 facebook-sdk
+gspread
+oauth2client

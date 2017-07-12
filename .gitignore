@@ -3,3 +3,4 @@ build/
 dist/
 Katalyst_Kpi_Visualizer.egg-info
 *.pyc
+client_secret.json
