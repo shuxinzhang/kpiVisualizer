@@ -13,5 +13,6 @@ Authorize the google sheet API(Instructions found at https://developers.google.c
 
 1. Youtube subscribers
 2. Youtube Views.
-3. Facebook Likes. 
+3. Youtube video count.
+4. Facebook Likes. 
 

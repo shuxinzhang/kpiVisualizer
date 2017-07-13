@@ -1,7 +1,7 @@
 import login_helper as login
 
 service = login.gspread_auth()
-spreadsheet_id = "19KvaY04qRaUYvk_rPWC5qHUgzdwr06Eq4b37VGuHjgY"
+spreadsheet_id = login.getCredentials("google-sheet","id")
 spreadsheet = service.spreadsheets().values()
 
 def add_new_row(dataArray,sheetName,Range):
