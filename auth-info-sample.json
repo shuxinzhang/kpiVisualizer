@@ -6,5 +6,12 @@
 	"facebook": {
 		"auth-token":"YourFBAuthToken",
 		"page-id":"YourFacebookPageID"
+	},
+	"google-sheet": {
+		"id":"sheet-id"
+	},
+	"jira": {
+		"username":"sampleuser",
+		"password":"samplepassword"
 	}
 }

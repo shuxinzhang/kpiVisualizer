@@ -2,6 +2,7 @@ from __future__ import print_function
 import httplib2
 import os
 import json
+import base64
 from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
@@ -11,6 +12,9 @@ def getCredentials(platform,key):
 	auth_data = open('auth-info.json')
 	auth_json = json.load(auth_data)
 	return auth_json[platform][key] 
+
+def encode_token(username,password):
+    return base64.b64encode((username+':'+password).encode('ascii'))
 
 try:
     import argparse
