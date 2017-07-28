@@ -1,8 +1,10 @@
 import youtube_grabber as youtube
 import facebook_grabber as facebook
 import gsheethelper as gsheet
+import login_helper as login
 import jira
 import time
+import googleAnalytics as ga
 
 def printYouTubeData():
 	YOUTUBE_RAW_DATA = youtube.request_stats()
@@ -23,7 +25,12 @@ def main():
     data_input.append(str(facebook.getLikes()))
     for entry in jira_data:
         data_input.append(str(jira_data[entry]))
-    print(data_input)
+    data_input.append(ga.get_session('career-map'))
+    data_input.append(ga.get_user('career-map'))
+    data_input.append(ga.get_session('pi-stacja'))
+    data_input.append(ga.get_user('pi-stacja'))
+    data_input.append(ga.get_session('katalyst-education'))
+    data_input.append(ga.get_user('katalyst-education'))
     gsheet.add_new_row(data_input,'pistacja','A1:E1').execute()
 
 

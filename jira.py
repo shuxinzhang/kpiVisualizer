@@ -54,7 +54,6 @@ def get_jira_data():
 	data['cnx modules']=cnx_modules()
 	return data
 	
-print get_jira_data()
 	
 
 
